@@ -6,7 +6,8 @@ extends Sprite
 # var b = "text"
 
 func _process(delta):
-	set_text("Parabéns!!!")
+#	var x = set_text("Parabéns!!!")
+	pass
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

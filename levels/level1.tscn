@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://cano.gd" type="Script" id=1]
 [ext_resource path="res://respostas.gd" type="Script" id=2]
@@ -6,23 +6,25 @@
 [ext_resource path="res://assets/canos/cano_inicial.png" type="Texture" id=4]
 [ext_resource path="res://assets/canos/cano_reto.png" type="Texture" id=5]
 [ext_resource path="res://levels/next_level.gd" type="Script" id=6]
-[ext_resource path="res://assets/interface/setinha/direita.png" type="Texture" id=8]
+[ext_resource path="res://assets/interface/setinha/direita.png" type="Texture" id=7]
+[ext_resource path="res://assets/imagens jogo/Queijo triangular.png" type="Texture" id=8]
 [ext_resource path="res://assets/interface/corações/cheio.png" type="Texture" id=9]
+[ext_resource path="res://assets/imagens jogo/ratinho Larry.png" type="Texture" id=10]
+[ext_resource path="res://assets/imagens jogo/Fundo.png" type="Texture" id=11]
 
 [node name="Level1" type="Node2D"]
 script = ExtResource( 2 )
+
+[node name="Fundo" type="Sprite" parent="."]
+position = Vector2( 528, 301 )
+scale = Vector2( 0.909058, 0.909058 )
+texture = ExtResource( 11 )
 
 [node name="CanoInicial" type="Sprite" parent="."]
 position = Vector2( 355, 80 )
 scale = Vector2( 5, 6 )
 texture = ExtResource( 4 )
 offset = Vector2( 7.62939e-06, 0 )
-
-[node name="CanoFinal" type="Sprite" parent="."]
-position = Vector2( 937, 483 )
-rotation = -4.71239
-scale = Vector2( 5, 6 )
-texture = ExtResource( 4 )
 
 [node name="CanoReto" type="Sprite" parent="."]
 position = Vector2( 359, 267 )
@@ -92,7 +94,18 @@ shortcut_in_tooltip = false
 [node name="Sprite" type="Sprite" parent="trigger_button"]
 position = Vector2( 42, 29 )
 scale = Vector2( 0.19163, 0.20283 )
+texture = ExtResource( 7 )
+
+[node name="QueijoTriangular" type="Sprite" parent="."]
+position = Vector2( 948, 480 )
+scale = Vector2( 0.102247, 0.0990691 )
 texture = ExtResource( 8 )
+
+[node name="RatinhoLarry" type="Sprite" parent="."]
+position = Vector2( 98.5881, 515.125 )
+scale = Vector2( 0.18901, 0.18901 )
+z_index = 2
+texture = ExtResource( 10 )
 
 [connection signal="pressed" from="trigger_button" to="." method="_on_trigger_button_pressed"]
 [connection signal="pressed" from="trigger_button" to="NextLevel" method="_on_trigger_button_pressed"]

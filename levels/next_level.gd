@@ -38,7 +38,7 @@ func vitoria():
 		var next_level_path = "res://levels/level" + str(next_level_number) + ".tscn"
 		return get_tree().change_scene(next_level_path)
 	
-	return get_tree().change_scene_to_file("res://levels/level/vitoria.tscn")
+	return get_tree().change_scene("res://levels/vitoria.tscn")
 		
 
 #func _process(delta):

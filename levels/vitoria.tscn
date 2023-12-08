@@ -1,9 +1,15 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://assets/interface/janela de vitoria e derrota/vitoria2.png" type="Texture" id=1]
 [ext_resource path="res://levels/Vitoria.gd" type="Script" id=2]
+[ext_resource path="res://assets/imagens jogo/Fundo.png" type="Texture" id=3]
 
 [node name="Vitoria" type="Node2D"]
+
+[node name="Fundo" type="Sprite" parent="."]
+position = Vector2( 528, 301 )
+scale = Vector2( 0.909058, 0.909058 )
+texture = ExtResource( 3 )
 
 [node name="Vitoria2" type="Sprite" parent="."]
 position = Vector2( 533, 283 )
