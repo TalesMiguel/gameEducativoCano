@@ -1,14 +1,14 @@
 extends Sprite
-export var states = [0, 1, 2, 3]
+export var states = [1, 2, 3, 4]
 
 func _input(event):
 	if event is InputEventMouseButton and event.pressed and event.button_index == BUTTON_LEFT:
 		if get_rect().has_point(to_local(event.position)):
 			rotation_degrees += 90
-			if event.states == 3:
-				event.states = 0
-			else:
-				event.states += 1
+#			if states == 3:
+#				states = 0
+#			else:
+#				states += 1
 			# tem que colocar aqui que o cano mudou o estado
 
 
