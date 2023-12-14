@@ -105,6 +105,34 @@ texture = ExtResource( 8 )
 expand = true
 stretch_mode = 2
 
+[node name="Hearts2" type="TextureRect" parent="UI/Life"]
+anchor_left = -0.574999
+anchor_top = -0.375
+anchor_right = -0.574999
+anchor_bottom = -0.375
+margin_left = 165.0
+margin_top = 19.0
+margin_right = 446.0
+margin_bottom = 273.0
+rect_scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 8 )
+expand = true
+stretch_mode = 2
+
+[node name="Hearts3" type="TextureRect" parent="UI/Life"]
+anchor_left = -0.574999
+anchor_top = -0.375
+anchor_right = -0.574999
+anchor_bottom = -0.375
+margin_left = 93.0
+margin_top = 19.0
+margin_right = 374.0
+margin_bottom = 273.0
+rect_scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 8 )
+expand = true
+stretch_mode = 2
+
 [node name="trigger_button" type="Button" parent="."]
 anchor_left = 0.5
 anchor_top = 0.5
@@ -127,8 +155,9 @@ scale = Vector2( 0.122294, 0.122294 )
 texture = ExtResource( 10 )
 
 [node name="RatinhoLarry" type="Sprite" parent="."]
-position = Vector2( 98.588, 515.125 )
-scale = Vector2( 0.189, 0.189 )
+position = Vector2( 83.2085, 227 )
+scale = Vector2( 0.105386, 0.108314 )
+z_index = 2
 texture = ExtResource( 11 )
 
 [connection signal="pressed" from="trigger_button" to="NextLevel" method="_on_trigger_button_pressed"]

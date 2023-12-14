@@ -7,8 +7,9 @@ var hearts: float = max_hearts
 
 var canos: Array
 
+var larry = load("res://levels/Area2D.gd").new()
 
-#var respostas = load("res://respostas.gd").new()
+var respostas = load("res://respostas.gd").new()
 
 
 func _ready():
@@ -22,7 +23,7 @@ func tentar_solucao():
 
 	# compara o dict de canos + valores esperados com o nó da chave (cano) e o valor atual
 #	$respostas.respos
-	if valid_solution():
+	if not valid_solution():
 		hearts -= 0.5
 		emit_signal("life_changed", hearts)
 		if hearts <= 0:
@@ -32,6 +33,7 @@ func tentar_solucao():
 
 
 func vitoria():
+	larry.andar()
 	var current_scene_file = get_tree().current_scene.filename
 	var next_level_number = current_scene_file.to_int() + 1
 	if next_level_number != 4:
@@ -48,7 +50,12 @@ func game_over():
 	pass
 
 func valid_solution():
-	false
+	var nivel_atual = get_tree().current_scene.filename.to_int()
+	var aux = "resposta_level_" + str(nivel_atual)
+	var resposta_atual = respostas.aux()
+	
+	var is_valid = true
+	return is_valid
 
 
 func _on_trigger_button_pressed():
