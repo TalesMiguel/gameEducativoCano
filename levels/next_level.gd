@@ -51,8 +51,8 @@ func game_over():
 
 func valid_solution():
 	var nivel_atual = get_tree().current_scene.filename.to_int()
-	var aux = "resposta_level_" + str(nivel_atual)
-	var resposta_atual = respostas.aux()
+	var aux = "respostas_level" + str(nivel_atual) + "()"
+	var resposta_atual = respostas.aux
 	
 	var is_valid = true
 	return is_valid
