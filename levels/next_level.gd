@@ -20,7 +20,6 @@ func tentar_solucao():
 #	var respostas = get_node("Level1").respostas_level1
 #	print(respostas)
 
-
 	# compara o dict de canos + valores esperados com o nó da chave (cano) e o valor atual
 #	$respostas.respos
 	if not valid_solution():
@@ -33,13 +32,14 @@ func tentar_solucao():
 
 
 func vitoria():
-	larry.andar()
+#	larry.andar()
 	var current_scene_file = get_tree().current_scene.filename
 	var next_level_number = current_scene_file.to_int() + 1
 	if next_level_number != 4:
 		var next_level_path = "res://levels/level" + str(next_level_number) + ".tscn"
+		yield(get_tree().create_timer(4.489), "timeout")
 		return get_tree().change_scene(next_level_path)
-	
+	yield(get_tree().create_timer(3.7), "timeout")
 	return get_tree().change_scene("res://levels/vitoria.tscn")
 		
 
@@ -52,8 +52,8 @@ func game_over():
 
 func valid_solution():
 	var nivel_atual = get_tree().current_scene.filename.to_int()
-	var aux = "respostas_level" + str(nivel_atual) + "()"
-	var resposta_atual = respostas.aux
+#	var aux = "respostas_level" + str(nivel_atual) + "()"
+#	var resposta_atual = respostas.aux
 	
 	var is_valid = true
 	return is_valid
