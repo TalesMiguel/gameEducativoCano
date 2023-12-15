@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://CreditosScreen.gd" type="Script" id=1]
+[ext_resource path="res://assets/interface/botão jogar/fundo.png" type="Texture" id=2]
+
+[node name="CreditosScreen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="RichTextLabel" type="Button" parent="."]
+margin_left = 280.0
+margin_top = 64.0
+margin_right = 714.0
+margin_bottom = 300.0
+rect_scale = Vector2( 0.998722, 1.77307 )
+icon = ExtResource( 2 )
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+margin_left = 112.0
+margin_top = 72.0
+margin_right = 152.0
+margin_bottom = 112.0
+text = "Feito por:
+
+Tales Miguel
+Abuble"
