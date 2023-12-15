@@ -47,7 +47,8 @@ func vitoria():
 #	pass
 
 func game_over():
-	pass
+	return get_tree().change_scene("res://levels/Derrota.tscn")
+
 
 func valid_solution():
 	var nivel_atual = get_tree().current_scene.filename.to_int()
